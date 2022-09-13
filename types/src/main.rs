@@ -13,7 +13,7 @@ fn main() {
 
     // integers can be signed or unsigned (doesn't need a sign because iit is obly ever positive) which decides whetehr it can be negative or not
     // 'i' prefix for signed 'u' for unsigned 
-    //
+
     // i8     u8     
     // i16    u16
     // i32    u32
@@ -56,10 +56,34 @@ fn main() {
     let z: char = 'ℤ'; // with explicit type annotation
     let heart_eyed_cat = '😻';
 
-    println!("Chars: {c}, {z}, {heart_eyed_cat}")
+    println!("Chars: {c}, {z}, {heart_eyed_cat}");
 
     // compound types are can group multiple values in one type like an array 
     // rust has two primitve compuind types: tuples and, arrays
 
+    let tup = (1, 1, 2, 3);
+    // the types of the tuple don't have to be the same
+    // var tup binds th entire tup
+
+    let (w, x, y, z) = tup;
+    // to get the individual value of a tuple we bind the values to pattern matched group of variables 
+    // this is called destructurinig because we split the tuple into smaller invidual varibales
+
+    println!("the vale of w is {w}, the value of x is {x}, the value of y is {y}, the value of z is {z}");
+
+    let arr = [1, 1, 2, 3];
+    // this is an array and is useful when you want data allocated to the stack vs the heap
+    // arrays are more useful when you know the number of elements
+
+    let a: [i32; 5] = [1, 1, 2, 3, 5];
+    // i32 is the type of each element
+    // the number afterwards indicates the number of values
+    // but you can lso declare the variable like above without the type and number of values
+
+    let o1 = arr[0];
+    let p1 = a[0];
+    // access array values like python
+
+    println!("the value of the first elemnt of each array is: {o1}, {p1}");
 
 }
