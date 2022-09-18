@@ -1,7 +1,8 @@
 fn main() {
     if_expr(6);
+    looping();
+    while_loop();
     for_loop()
-    while_loop()
 }
 
 fn if_expr(num: i32) {
@@ -26,7 +27,7 @@ fn if_expr(num: i32) {
 
 }
 
-fn for_loop() {
+fn looping() {
 
     let mut counter = 0;
 
@@ -67,10 +68,38 @@ fn for_loop() {
         count += 1;
     };
 
-    println!("End count = {count}")
+    println!("End count = {count}");
 
 }
 
-fn while_loop() -> i32 {
-    0
+fn while_loop() {
+
+    let mut num = 5;
+
+    while num != 0 {
+        println!("{}", num);
+        num -= 1;
+        // condition controlled loop
+    }
+
+    println!("Liftoff!")
+    
+}
+
+fn for_loop() {
+
+    let arr = [10, 20, 30, 40, 50];
+
+    for element in arr {
+        println!("the value of the element is {element}")
+        // looping through a construct
+    }
+
+    for num in (1..4).rev() {
+        println!("{}", num)
+        // a cleaner and safer alternative while loop counting
+    }
+
+    println!("Liftoff!")
+
 }
